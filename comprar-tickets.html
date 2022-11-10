@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/estilos-propios.css">
     <link rel="shortcut icon" href="./img/codoacodo-min.png" type="image/x-icon">
     <title>Trabajo Integrador: Comprar tickets</title>
+    <script src="./js/comprar-tickets.js" defer></script>
 </head>
 
 <body>
@@ -97,28 +98,28 @@
 
                     <h2 class="titulo-gral">Venta <span>Valor de ticket $200</span></h2>
 
-                    <form action="">
+                    <form action="" id="formulario">
                         <div class="row gx-2">
                             <div class="col-md mb-3">
                                 <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre"
-                                    id="nombre" required>
+                                    id="nombre" >
                             </div>
                             <div class="col-md mb-3">
                                 <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido"
-                                    id="apellido" required>
+                                    id="apellido" >
                             </div>
                         </div>
                         <div class="row">
                             <div class="col mb-3">
                                 <input type="email" class="form-control" placeholder="Email" aria-label="Email"
-                                    id="mail" required>
+                                    id="mail" >
                             </div>
                         </div>
                         <div class="row gx-2">
                             <div class="col-md mb-3">
                                 <label for="cantidadTickets" class="form-label">Cantidad</label>
                                 <input type="number" class="form-control" placeholder="Cantidad" aria-label="Cantidad"
-                                    id="cantidadTickets" min="1" required>
+                                    id="cantidadTickets" min="1" >
                             </div>
                             <div class="col-md mb-3">
                                 <label for="categoriaSelect" class="form-label">Categoría</label>
@@ -139,7 +140,7 @@
                                 <button type="reset" class="w-100 btn btn-lg btn-form" id="btnBorrar">Borrar</button>
                             </div>
                             <div class="col-md mb-3">
-                                <button type="button" class="w-100 btn btn-lg btn-form" id="btnResumen">Resumen</button>
+                                <button type="submit" class="w-100 btn btn-lg btn-form" id="btnResumen">Resumen</button>
                             </div>
                         </div>
                     </form>
