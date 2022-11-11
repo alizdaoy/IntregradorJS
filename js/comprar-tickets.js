@@ -8,34 +8,9 @@ const categoria = document.getElementById("categoriaSelect");
 const borrar = document.getElementById("btnBorrar");
 const resumen = document.getElementById("btnResumen");
 let valorTicket = 200;
-const expresiones = {
-	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-    mail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-}
 
-const validarFormulario = (e)=>{
-    switch (e.target.name){
-        case "nombre":
-            if(expresiones.nombre.test(e.target.value)==false){
-                form.nombre.value="";
-                form.nombre.focus="";
-            }
-        break;
-        case "apellido":
-            if(expresiones.apellido.test(e.target.value)==false){
-                form.apellido.value="";
-                form.apellido.focus="";
-            }
-        break;
-        case "mail":
-            if(expresiones.mail.test(e.target.value)==false){
-                form.mail.value="";
-                form.mail.focus="";
-            }
-        break;
-    }
-}
+
+// codigo de calculo de total
 form.addEventListener("submit", (event)=>{
 
     switch(parseInt(categoria.value)){
@@ -62,4 +37,16 @@ form.addEventListener("submit", (event)=>{
         }
     event.preventDefault();
     
+})
+
+// boton reset 
+btnBorrar.addEventListener("click", (borrar)=>{
+        console.log("Funciona :D")
+        nombre.value="";
+        apellido.value="";
+        mail.value="";
+        cantidad.value="";
+        categoria.value="";
+        totalPago.textContent="";
+    borrar.preventDefault();
 })
