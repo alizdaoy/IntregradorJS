@@ -36,7 +36,6 @@ form.addEventListener("submit", (event)=>{
             break;
         }
     event.preventDefault();
-    
 })
 
 // boton reset 
@@ -46,5 +45,6 @@ btnBorrar.addEventListener("click", (borrar)=>{
         mail.value="";
         cantidad.value="";
         categoria.value="";
+        totalPago.textContent="0.0";
         borrar.preventDefault();
 })
