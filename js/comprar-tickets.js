@@ -41,12 +41,10 @@ form.addEventListener("submit", (event)=>{
 
 // boton reset 
 btnBorrar.addEventListener("click", (borrar)=>{
-        console.log("Funciona :D")
         nombre.value="";
         apellido.value="";
         mail.value="";
         cantidad.value="";
         categoria.value="";
-        totalPago.textContent="";
-    borrar.preventDefault();
+        borrar.preventDefault();
 })
